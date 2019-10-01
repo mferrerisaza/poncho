@@ -1,2 +1,146 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- Producto principal y moto -->
+<div class="banner" style="background-image: linear-gradient(to top, rgba(65,67,69,0.48), rgba(65,67,69,0.48)), url('<%= cl_image_path("the-woman-box/banner_final.png")%>');">
+  <div class="banner-content">
+    <h1>lo esencial para el período en tu puerta</h1>
+    <p>Recibe toallas o tampones de tu elección y regalos de temporada todos los meses</p>
+    <%= link_to "ARMA TU BOX", "#", class: "button2 banner-call-to-actions" %>
+  </div>
+</div>
+
+<!-- Contenido de la caja y foto productos -->
+<div class="banner-container background-white no-margin-top padding-section flex-reverse padding-bottom-mid">
+  <div class="flex-center">
+    <div class="banner-text padding-bottom-mid">
+      <div class="banner-title padding-left-big padding-left-small padding-right-small padding-bottom-mid">
+        <h2>Esos días no tienen porque ser dificiles. Cada caja contiene los esenciales que elijas y otros productos sorpresa diseñados para hacerte más feliz. Solo <i style="color: #EC96AB;">$34.900 / Mes</i></h2>
+      </div>
+      <div class="banner-motto padding-left-big padding-left-small padding-right-small padding-right-huge">
+        <div class="products-list padding-left-big padding-left-mid margin-top-mid">
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Tampones o toallas higiénicas
+            </p>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Protectores
+            </p>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Pañitos húmedos
+            </p>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Artículos de maquillaje
+            </p>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Chocolates, snacks, tés o dulces
+            </p>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Otros productos naturales y de temporada
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" banner-image" style="background-image: url('<%= cl_image_path("the-woman-box/box_content.jpg", width: 500, height: 500)%>');">
+  </div>
+</div>
+<!-- Como funciona -->
+<div class="how-it-works-container background-white" style="background-image: url('<%=cl_image_path("the-woman-box/the_woman_box_instagram_2.jpg")%>')">
+  <div class="how-it-works-section background-white">
+    <div class="how-it-works-section-title padding-bottom-mid flex-center flex-justify-center padding-top-mid">
+      <h2 class="banner-title">¿Cómo funciona?</h2>
+    </div>
+    <div class="text-center">
+      <div class="flex-center flex-justify-around display-block-mobile">
+        <div class="step-description">
+          <a href="<%= "#" %>">
+            <div class="icon padding-bottom-small">
+              <%= image_tag "tampon.svg", class:"avatar-big"%>
+            </div>
+          </a>
+          <div class="avatar-big mid-font padding-bottom-small">
+            <p>Arma tu caja con tus productos favoritos.</p>
+          </div>
+        </div>
+        <div class="step-description">
+          <div class="icon padding-bottom-small">
+            <%= image_tag "checklist.svg", class:"avatar-big"%>
+          </div>
+          <div class="avatar-big mid-font padding-bottom-small">
+            <p>Llena los datos y paga tu suscripción.</p>
+          </div>
+        </div>
+        <div class="step-description">
+          <div class="icon padding-bottom-small">
+            <%= image_tag "makeup.svg", class:"avatar-big"%>
+          </div>
+          <div class="avatar-big mid-font padding-bottom-small">
+            <p>Agregamos regalos para hacerte feliz.</p>
+          </div>
+        </div>
+        <div class="step-description">
+          <div class="icon padding-bottom-small">
+            <%= image_tag "delivery-truck.svg", class:"avatar-big"%>
+          </div>
+          <div class="avatar-big mid-font padding-bottom-small">
+            <p>Recibirás todo en casa, una vez al mes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr style="border: 0.5px solid #33333e; margin-right: 30%; margin-left: 30%;">
+    <!-- Condiciones -->
+    <div class="padding-top-mid padding-bottom-mid">
+      <div class="flex-center flex-justify-center">
+        <div class="conditions-text text-center">
+          <h4 class="banner-title"><strong>Por solo $34.900 al mes + <u>envío GRATIS</u></strong></h4>
+        </div>
+        <div class="padding-left-big padding-left-mid  mobile-hidden">
+          <%= link_to "ARMA TU BOX", "#", class: "button2 banner-call-to-actions" %>
+        </div>
+      </div>
+      <div class="product-condditions-list flex-center flex-justify-center">
+        <div class="list-container">
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <div class="padding-left-xsmall">
+              <p class="product-item-text">Sin cláusulas de permanencia</p>
+            </div>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <div class="padding-left-xsmall">
+              <p class="product-item-text">Sin contratos</p>
+            </div>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <div class="padding-left-xsmall">
+              <p class="product-item-text">Cancela cuando quieras</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center padding-left-big desktop-hidden button-height margin-top-big">
+        <%= link_to "ARMA TU BOX", "#", class: "button2 banner-call-to-actions" %>
+      </div>
+    </div>
+
+  </div>
+</div>
+<%= render 'shared/footer', background: "background-white", border_top:"no-border-top" %>

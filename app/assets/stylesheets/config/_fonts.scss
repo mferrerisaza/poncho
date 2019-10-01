@@ -2,8 +2,27 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
 
 // Define fonts for body and headers
+@font-face {
+  font-family: "Caviar Dreams";
+  src: font-url('caviar_dreams/CaviarDreams.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Caviar Dreams";
+  src: font-url('caviar_dreams/CaviarDreams_Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Caviar Dreams";
+  src: font-url('caviar_dreams/CaviarDreams_Italic.ttf') format('truetype');
+  font-weight: lighter;
+}
+
+
+$caviar-dreams: "Caviar Dreams";
+
 $body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Raleway", "Helvetica", "sans-serif";
+$headers-font: $caviar-dreams;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
