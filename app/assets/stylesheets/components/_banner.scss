@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 400px;
+  flex-basis: 80%
 }
 
 .banner-text h1 {
@@ -38,7 +39,8 @@
   }
 
   .banner-text {
-    padding-right: 60px;
+    padding-right: 48px;
+    margin-right: 48px;
   }
 
   .banner-text p {
