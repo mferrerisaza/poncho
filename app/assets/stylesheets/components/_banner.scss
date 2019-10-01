@@ -74,7 +74,7 @@
 .banner {
   color: white;
   text-align: center;
-  height: calc( 100vh - 110px) ;
+  height: calc( 100vh - 66px) ;
   background-size: cover !important;
   display: flex;
   align-items: center;
@@ -86,6 +86,7 @@
     width: 90%;
   }
 }
+
 .banner h1 {
   font-size: 64px;
   letter-spacing: 0.1em;
