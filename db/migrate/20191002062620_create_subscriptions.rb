@@ -7,6 +7,5 @@ class CreateSubscriptions < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    drop_table :suscriptions
   end
 end
