@@ -5,12 +5,10 @@
   font-size: 48px;
   color: $my-black;
 }
-
 .map-subtitle {
   font-size: 16px;
   color: $my-black;
 }
-
 .map-label-container {
   display: flex;
   justify-content: space-around;
@@ -18,7 +16,6 @@
   border: solid 1px #e5e5e5;
   border-radius: 4px;
 }
-
 @media (min-width: 992px) {
   .map-label-container {
     width: 34%;
@@ -30,11 +27,6 @@
   align-items: center;
   width: 42%;
 }
-
-.label-container {
-  display: flex;
-  justify-content: center;
-}
 .color-indicator {
   height: 6px;
   width: 24px;
@@ -43,7 +35,6 @@
 .color-indicator-existentes {
   background-color: #8bcfa3;
 }
-
 .color-indicator-proyectadas {
   background-color: #999999;
   margin-right: 12px;

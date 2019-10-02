@@ -1,6 +1,7 @@
 <div class="banner banner-padding" style="background-image: linear-gradient(to top, rgba(65,67,69,0.48), rgba(65,67,69,0.48)), url('<%= cl_image_path("poncho/banner-02.jpg")%>');">
   <div class="form-container">
     <h1 class="form-title">Registro prueba piloto</h1>
+    <p class="form-description text-center pb-2">Nos encontramos realizando la validación del producto, si te parece interesante la idea y piensas que podrías ser usuario de la plataforma, selecciona el plan en el que estarías interesado y dejanos tus datos para comunicarnos contigo y ser pionero del proyecto</p>
     <%= simple_form_for @subscription, url: plans_path do |f| %>
       <h2 class="form-subtitle">1. Escoge un plan</h2>
       <div class="radio-options">
