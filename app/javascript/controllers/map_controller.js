@@ -25,7 +25,7 @@ export default class extends Controller {
   }
 
   fetchData(criterio, map, color, line, id) {
-    fetch(`http://www.medellin.gov.co/mapas/rest/services/ServiciosPlaneacion/POT48_Sistema_colectivo/MapServer/14/query?where=1%3D1&outFields=*&outSR=4326&f=json`)
+    fetch(`https://www.medellin.gov.co/mapas/rest/services/ServiciosPlaneacion/POT48_Sistema_colectivo/MapServer/14/query?where=1%3D1&outFields=*&outSR=4326&f=json`)
       .then(response => response.json())
       .then((data) => {
         let newData = data.features.filter(coordinate => coordinate.attributes.ESTADO === criterio);
