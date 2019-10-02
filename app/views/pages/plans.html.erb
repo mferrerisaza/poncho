@@ -1,12 +1,12 @@
 <div class="banner banner-padding" style="background-image: linear-gradient(to top, rgba(65,67,69,0.48), rgba(65,67,69,0.48)), url('<%= cl_image_path("poncho/banner-02.jpg")%>');">
   <div class="form-container">
     <h1 class="form-title">Registro prueba piloto</h1>
-    <%= simple_form_for :suscription do |f| %>
+    <%= simple_form_for @subscription, url: plans_path do |f| %>
       <h2 class="form-subtitle">1. Escoge un plan</h2>
       <div class="radio-options">
         <div class="radio-option">
-          <input class=" form-check-input radio_buttons required" type="radio" value="bike" required name="suscription[type]" id="suscription_type_bike">
-          <label class="form-check-label collection_radio_buttons" for="suscription_type_bike">
+          <input class=" form-check-input radio_buttons required" type="radio" value="bike" required name="subscription[plan]" id="subscription_type_bike">
+          <label class="form-check-label collection_radio_buttons" for="subscription_type_bike">
             <div class="circle"></div>
             <h6>Plan Burrita</h6>
             <div class="option" style="background-image: url('<%= cl_image_path("poncho/bicicleta.png", width: 120, height: 120)%>');"></div>
@@ -14,8 +14,8 @@
           </label>
         </div>
         <div class="radio-option">
-          <input class=" form-check-input radio_buttons required" required type="radio" value="scooter" name="suscription[type]" id="suscription_type_scooter">
-          <label class="form-check-label collection_radio_buttons" for="suscription_type_scooter">
+          <input class=" form-check-input radio_buttons required" required type="radio" value="scooter" name="subscription[plan]" id="subscription_type_scooter">
+          <label class="form-check-label collection_radio_buttons" for="subscription_type_scooter">
             <div class="circle"></div>
             <h6>Plan Scooter</h6>
             <div class="option" style="background-image: url('<%= cl_image_path("poncho/PATINETA.png", width: 120, height: 120)%>');"></div>
@@ -23,13 +23,12 @@
           </label>
         </div>
       </div>
-      <section>
-        <h2 class="form-subtitle">2. Datos de contacto</h2>
+      <h2 class="form-subtitle">2. Ingresa tus datos de contacto</h2>
+      <div class="basic-info-container">
         <%= f.input :name, label: "Nombre Completo" %>
         <%= f.input :email, label: "Correo Eléctrónico" %>
-      </section>
-      <div class="text-right">
-
+      </div>
+      <div class="text-right pt-5">
         <%= f.submit "Reservar", class: "button2 banner-call-to-actions" %>
       </div>
     <% end %>

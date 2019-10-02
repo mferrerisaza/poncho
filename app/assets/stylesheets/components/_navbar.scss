@@ -30,3 +30,19 @@
   border: none;
   background: white;
 }
+// .navbar-collapse.collapse.show {
+//   background-color: white;
+//   .nav-link{
+//     color: $my-gray !important;
+//   }
+// }
+
+@media (max-width: 575px) {
+  .navbar-lewagon {
+    background-color: white;
+    .nav-link {
+      color: $my-gray !important;
+    }
+    border-bottom: 2px solid #8bcfa3;
+  }
+}
