@@ -7,7 +7,7 @@
   background-color: white;
 }
 .spacer {
-  height: 200px;
+  height: 100px;
   width: 100%;
 }
 @media (min-width: 992px) {
@@ -194,6 +194,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
   .banner-title {
     color: white;
   }
