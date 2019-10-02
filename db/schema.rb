@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_02_063301) do
+ActiveRecord::Schema.define(version: 2019_10_02_150645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(version: 2019_10_02_063301) do
     t.integer "plan"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "id_type"
+    t.string "tax_id"
+    t.integer "account_type"
+    t.string "account_number"
+    t.integer "country"
+    t.integer "city"
+    t.string "address"
+    t.json "payment"
   end
 
 end

@@ -1,0 +1,42 @@
+<div class="banner banner-padding" style="background-image: linear-gradient(to top, rgba(65,67,69,0.48), rgba(65,67,69,0.48)), url('<%= cl_image_path("poncho/banner-02.jpg")%>');">
+  <div class="form-container">
+    <h1 class="form-title">Bienvenido a Poncho <%= @subscription.name.split(" ")[0].capitalize %> </h1>
+    <br>
+    <p class="form-text">En breve nos contactaremos contigo y en un máximo de 24 horas recibirás tú vehiculo Poncho.</p>
+    <br>
+    <table class="table table-dark" style="font-size: 14px;">
+        <tr>
+          <th scope="col">Id Transacción</th>
+          <td scope="col"><%= @payment["data"][0]["transaction_id"] %></td>
+        </tr>
+        <tr>
+          <th scope="col">Resultado del pago</th>
+          <td scope="col"><%= @payment["data"][0]["status"]["description"] %></td>
+        </tr>
+        <tr>
+          <th scope="col">Tipo de documento</th>
+          <td scope="col"><%= @subscription.id_type %></td>
+        </tr>
+        <tr>
+          <th scope="col">Número de documento</th>
+          <td scope="col"><%= @subscription.tax_id %></td>
+        </tr>
+        <tr>
+          <th scope="col">Tipo de Cuenta</th>
+          <td scope="col"><%= @subscription.account_type %></td>
+        </tr>
+        <tr>
+          <th scope="col">Número Cuenta</th>
+          <td scope="col"><%= @subscription.account_number %></td>
+        </tr>
+        <tr>
+          <th scope="col">Monto Pagado</th>
+          <td scope="col"><%= @subscription.plan == "bike" ? "$150.000" : "$120.000" %></td>
+        </tr>
+        <tr>
+          <th scope="col">Dirección de Entrega</th>
+          <td scope="col"><%= @subscription.address %></td>
+        </tr>
+    </table>
+  </div>
+</div>
