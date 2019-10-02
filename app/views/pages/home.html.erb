@@ -1,66 +1,15 @@
 <!-- Producto principal y moto -->
-<div class="banner" style="background-image: linear-gradient(to top, rgba(65,67,69,0.48), rgba(65,67,69,0.48)), url('<%= cl_image_path("the-woman-box/banner_final.png")%>');">
+<div class="banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.48), rgba(0,0,0,0.48)), url('<%= cl_image_path("poncho/imagen_2.jpg")%>');">
   <div class="banner-content">
     <h1>Cambia tu vida, se sostenible</h1>
-    <p>Renta equipos de movilidad sostenible y reduce tus tiempos de viaje</p>
-    <%= link_to "Ver planes", planes_path, class: "button2 banner-call-to-actions" %>
+    <p>Alquiler mensual de patinetas y bicicletas eléctricas.</p>
+    <%= link_to "Reserva la tuya", plans_path, class: "button2 banner-call-to-actions" %>
   </div>
 </div>
 
 <!-- Contenido de la caja y foto productos -->
-<div class="banner-container background-white no-margin-top padding-section flex-reverse padding-bottom-mid">
-  <div class="flex-center">
-    <div class="banner-text padding-bottom-mid">
-      <div class="banner-title padding-left-big padding-left-small padding-right-small padding-bottom-mid">
-        <h2>Muevete de forma dinámica y con estilo en nuestra <i style="color: rgb(139, 207, 163);">Scooter Eléctrica</i></h2>
-      </div>
-      <div class="banner-motto padding-left-big padding-left-small padding-right-small padding-right-huge">
-        <div class="products-list padding-left-big padding-left-mid margin-top-mid">
-          <div class="product-item flex-center">
-            <i class="fas fa-check fa-sm"> </i>
-            <p class="product-item-text padding-left-xsmall font-small-mobile">
-              Tampones o toallas higiénicas
-            </p>
-          </div>
-          <div class="product-item flex-center">
-            <i class="fas fa-check fa-sm"> </i>
-            <p class="product-item-text padding-left-xsmall font-small-mobile">
-              Protectores
-            </p>
-          </div>
-          <div class="product-item flex-center">
-            <i class="fas fa-check fa-sm"> </i>
-            <p class="product-item-text padding-left-xsmall font-small-mobile">
-              Pañitos húmedos
-            </p>
-          </div>
-          <div class="product-item flex-center">
-            <i class="fas fa-check fa-sm"> </i>
-            <p class="product-item-text padding-left-xsmall font-small-mobile">
-              Artículos de maquillaje
-            </p>
-          </div>
-          <div class="product-item flex-center">
-            <i class="fas fa-check fa-sm"> </i>
-            <p class="product-item-text padding-left-xsmall font-small-mobile">
-              Chocolates, snacks, tés o dulces
-            </p>
-          </div>
-          <div class="product-item flex-center">
-            <i class="fas fa-check fa-sm"> </i>
-            <p class="product-item-text padding-left-xsmall font-small-mobile">
-              Otros productos naturales y de temporada
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class=" banner-image" style="background-image: url('<%= cl_image_path("the-woman-box/box_content.jpg", width: 500, height: 500)%>');">
-  </div>
-</div>
-<div class="banner-container background-white no-margin-top padding-section flex-reverse padding-bottom-mid">
-  <div class=" banner-image" style="background-image: url('<%= cl_image_path("the-woman-box/box_content.jpg", width: 500, height: 500)%>');">
+<div id="bike" class="banner-container  no-margin-top padding-section flex-reverse padding-bottom-mid">
+  <div class=" banner-image" style="background-image: url('<%= cl_image_path("poncho/bicicleta.png", width: 500, height: 500)%>');">
   </div>
   <div class="flex-center">
     <div class="banner-text padding-bottom-mid">
@@ -110,9 +59,60 @@
     </div>
   </div>
 </div>
-Como funciona
-<div class="how-it-works-container background-white" style="background-image: url('<%=cl_image_path("the-woman-box/the_woman_box_instagram_2.jpg")%>')">
-  <div class="how-it-works-section background-white">
+<div id="scooter" class="banner-container no-margin-top padding-section flex-reverse padding-bottom-mid colors-reverse">
+  <div class="flex-center">
+    <div class="banner-text padding-bottom-mid">
+      <div class="banner-title padding-left-big padding-left-small padding-right-small padding-bottom-mid">
+        <h2>Muevete de forma dinámica y con estilo en nuestra <i style="color: rgb(139, 207, 163);">Scooter Eléctrica</i></h2>
+      </div>
+      <div class="banner-motto padding-left-big padding-left-small padding-right-small padding-right-huge">
+        <div class="products-list padding-left-big padding-left-mid margin-top-mid">
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Tampones o toallas higiénicas
+            </p>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Protectores
+            </p>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Pañitos húmedos
+            </p>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Artículos de maquillaje
+            </p>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Chocolates, snacks, tés o dulces
+            </p>
+          </div>
+          <div class="product-item flex-center">
+            <i class="fas fa-check fa-sm"> </i>
+            <p class="product-item-text padding-left-xsmall font-small-mobile">
+              Otros productos naturales y de temporada
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner-image" style="background-image: url('<%= cl_image_path("poncho/PATINETA.png", width: 500, height: 500)%>');">
+  </div>
+</div>
+<div class="spacer"></div>
+<div id="how-it-works" class="how-it-works-container background-white" style="background-image: url('<%=cl_image_path("poncho/bici.jpg")%>')">
+  <div class="how-it-works-section">
     <div class="how-it-works-section-title padding-bottom-mid flex-center flex-justify-center padding-top-mid">
       <h2 class="banner-title">¿Cómo funciona?</h2>
     </div>
@@ -121,48 +121,52 @@ Como funciona
         <div class="step-description">
           <a href="<%= "#" %>">
             <div class="icon padding-bottom-small">
-              <%= image_tag "tampon.svg", class:"avatar-big"%>
+              <%= image_tag "selecciona.svg", class:"avatar-big"%>
             </div>
           </a>
           <div class="avatar-big mid-font padding-bottom-small">
-            <p>Arma tu caja con tus productos favoritos.</p>
+            <p>Selecciona el tipo de vehículo poncho a rentar, patineta o bicicleta.</p>
           </div>
         </div>
         <div class="step-description">
           <div class="icon padding-bottom-small">
-            <%= image_tag "checklist.svg", class:"avatar-big"%>
+            <%= image_tag "datos.svg", class:"avatar-big"%>
           </div>
           <div class="avatar-big mid-font padding-bottom-small">
-            <p>Llena los datos y paga tu suscripción.</p>
+            <p>Llena algunos datos y paga el primer mes.</p>
           </div>
         </div>
         <div class="step-description">
           <div class="icon padding-bottom-small">
-            <%= image_tag "makeup.svg", class:"avatar-big"%>
+            <%= image_tag "reserva.svg", class:"avatar-big"%>
           </div>
           <div class="avatar-big mid-font padding-bottom-small">
-            <p>Agregamos regalos para hacerte feliz.</p>
+            <p>Separamos un vehículo Poncho para ti.</p>
           </div>
         </div>
         <div class="step-description">
           <div class="icon padding-bottom-small">
-            <%= image_tag "delivery-truck.svg", class:"avatar-big"%>
+            <%= image_tag "recibes.svg", class:"avatar-big"%>
           </div>
           <div class="avatar-big mid-font padding-bottom-small">
-            <p>Recibirás todo en casa, una vez al mes.</p>
+            <p>Lo enviamos a tú casa en un máximo de 24 horas.</p>
+          </div>
+        </div>
+        <div class="step-description">
+          <div class="icon padding-bottom-small">
+            <%= image_tag "disfruta.svg", class:"avatar-big"%>
+          </div>
+          <div class="avatar-big mid-font padding-bottom-small">
+            <p>Empiezas a ser sostenible y tienes todo un mes para disfrutar</p>
           </div>
         </div>
       </div>
     </div>
-    <hr style="border: 0.5px solid #33333e; margin-right: 30%; margin-left: 30%;">
-    Condiciones
+    <hr style="border: 2px solid #8bcfa3; margin-right: 30%; margin-left: 30%;">
     <div class="padding-top-mid padding-bottom-mid">
       <div class="flex-center flex-justify-center">
-        <div class="conditions-text text-center">
-          <h4 class="banner-title"><strong>Por solo $34.900 al mes + <u>envío GRATIS</u></strong></h4>
-        </div>
         <div class="padding-left-big padding-left-mid  mobile-hidden">
-          <%= link_to "ARMA TU BOX", "#", class: "button2 banner-call-to-actions" %>
+          <%= link_to "RESERVA LA TUYA", plans_path, class: "button2 banner-call-to-actions" %>
         </div>
       </div>
       <div class="product-condditions-list flex-center flex-justify-center">
@@ -188,7 +192,7 @@ Como funciona
         </div>
       </div>
       <div class="text-center padding-left-big desktop-hidden button-height margin-top-big">
-        <%= link_to "ARMA TU BOX", "#", class: "button2 banner-call-to-actions" %>
+        <%= link_to "RESERVA LA TUYA", plans_path, class: "button2 banner-call-to-actions" %>
       </div>
     </div>
 

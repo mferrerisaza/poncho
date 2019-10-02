@@ -3,6 +3,9 @@
   background: transparent;
   position: fixed;
   width: 100%;
+  .nav-link {
+    color: white !important;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,4 +14,18 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 200px;
+}
+.navbar-lewagon-white {
+  background: white;
+  .nav-link {
+    color: $my-gray !important;
+  }
+  border-bottom: 2px solid #8bcfa3;
+}
+.nav-link:hover {
+  opacity: 0.6
+}
+.navbar-toggler {
+  border: none;
+  background: white;
 }

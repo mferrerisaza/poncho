@@ -43,8 +43,11 @@
     text-decoration: underline;
   }
 }
+.footer-copyright{
+  color: black;
+}
 .footer-links a:hover {
-  color: $my-pink;
+  color: $primary;
 }
 .footer .fa-heart {
   font-size: 18px;

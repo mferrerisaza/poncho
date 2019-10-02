@@ -1,5 +1,9 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+<div
+  class="navbar navbar-expand-sm navbar-light navbar-lewagon"
+  data-controller="navbar"
+  data-action="scroll@window->navbar#scroll"
+>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag 'logo.png' %>
   <% end %>
 
@@ -7,14 +11,19 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Home", "#", class: "nav-link" %>
+      <li class="nav-item">
+        <%= link_to "Patinetas", "#scooter", class: "nav-link", data: { turbolinks: false }%>
       </li>
       <li class="nav-item">
-        <%= link_to "Messages", "#", class: "nav-link" %>
+        <%= link_to "Bicicletas", "#bike", class: "nav-link" , data: { turbolinks: false }%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "¿Cómo Funciona?", "#how-it-works", class: "nav-link" , data: { turbolinks: false }%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Planes", plans_path, class: "nav-link" %>
       </li>
     </ul>
   </div>

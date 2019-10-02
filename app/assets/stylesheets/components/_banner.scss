@@ -2,14 +2,26 @@
   height: calc(90vh - 70px);
   display: flex;
 }
+.banner-container.colors-reverse {
+  background-color: rgba(116, 116, 116, 1);
+  .banner-title h2, .product-item-text {
+    color: white;
+  }
+  .product-item-text {
+    font-weight: normal;
+  }
+  box-shadow: 0 0 1em rgba(0,0,0,0.4);
+}
 
 .banner-image{
-  width: 100%;
+  width: 80%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 400px;
-  flex-basis: 80%
+  border-radius: 8px;
+  margin: 32px;
+  // flex-basis: 80%
 }
 
 .banner-text h1 {
@@ -76,13 +88,14 @@
 .banner {
   color: white;
   text-align: center;
-  height: calc( 100vh - 66px) ;
+  height: 100vh;
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 
   .banner-content {
     width: 90%;
@@ -107,7 +120,7 @@
     font-size: 48px;
   }
   .banner p {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 .fas.fa-check{
