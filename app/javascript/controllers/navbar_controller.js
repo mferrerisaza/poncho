@@ -11,4 +11,8 @@ export default class extends Controller {
       }
     }
   }
+
+  changeColor() {
+   document.querySelector(".navbar-lewagon").classList.remove('navbar-lewagon-white');
+  }
 }

@@ -1,0 +1,110 @@
+.form-container {
+  width: 80%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 0.5em rgba($my-black, 0.3);
+  padding: 32px;
+  margin: 0 auto;
+  background-color: white;
+
+  form {
+    position: relative;
+  }
+
+  .form-group {
+    label {
+      color: $my-black;
+      float: left;
+      font-family: $caviar-dreams;
+    }
+  }
+
+  .form-title {
+    font-size: 40px;
+    color: $my-black;
+  }
+
+  .form-subtitle {
+    text-align: left;
+    padding-top: 32px;
+    padding-left: 32px;
+    font-size: 24px;
+    color: $my-black;
+  }
+
+  .option {
+    width: 120px;
+    height: 120px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .radio-options {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .radio-option {
+    position: relative;
+    margin: 16px;
+    .form-check-input {
+      position: absolute;
+      background: none;
+      z-index: -1;
+      top: 3px !important;
+      left: 26px !important;
+    }
+    label {
+      border-radius: 8px;
+      border: 2px solid $primary;
+      padding: 8px;
+      cursor: pointer;
+      position: relative;
+      h5 {
+        padding-top: 8px;
+        color: $my-black;
+        font-weight: normal;
+      }
+      .circle {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid $my-black;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+      }
+
+    }
+    label:hover {
+      background-color: rgba(0,0,0,0.2);
+      border: 2px solid rgb(116,116,116);
+    }
+    input[type=radio]:checked + label, {
+      background-color: $primary;
+      border: 2px solid $primary;
+      .circle {
+        background-color: $blue;
+        border: none;
+      }
+    }
+  }
+
+  h6 {
+    color: $my-black;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+  .how-it-works-section-title{
+    padding-bottom: 55px;
+  }
+  .product-item-text{
+    color: white;
+    font-weight: normal;
+  }
+
+}

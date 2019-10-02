@@ -101,6 +101,15 @@
     width: 90%;
   }
 }
+.banner-padding {
+  padding: 90px 0px;
+  height: 100% !important;
+  display: block !important;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+  margin: 0 auto !important;
+}
 
 .banner h1 {
   font-size: 64px;

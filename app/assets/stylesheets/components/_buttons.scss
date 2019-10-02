@@ -14,7 +14,6 @@
   border-radius: 0px;
   float: right;
 }
-
 .bundle-card-button {
   display: inline-block;
   padding: 14px 30px 10px 30px;
@@ -180,4 +179,9 @@
     background-color: #1ea550;
     text-decoration: none;
   }
+}
+.disabled-btn {
+  background-color: rgba(0,0,0,0.2);
+  color: $my-black;
+  cursor: auto;
 }
