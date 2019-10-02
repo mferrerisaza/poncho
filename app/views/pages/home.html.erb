@@ -194,4 +194,11 @@ Como funciona
 
   </div>
 </div>
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-existentes="<%= @existentes.to_json %>"
+  data-proyectados="<%= @proyectados.to_json %>"
+></div>
 <%= render 'shared/footer', background: "background-white", border_top:"no-border-top" %>
