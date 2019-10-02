@@ -1,6 +1,6 @@
 <div class="banner banner-padding" style="background-image: linear-gradient(to top, rgba(65,67,69,0.48), rgba(65,67,69,0.48)), url('<%= cl_image_path("poncho/banner-02.jpg")%>');">
   <div class="form-container">
-    <h1 class="form-title">Registro prueba piloto</h1>
+    <h1 class="form-title">Paga tu primer mes en Poncho</h1>
     <%= simple_form_for @subscription, url: plans_path do |f| %>
       <h2 class="form-subtitle">1. Escoge un plan</h2>
       <div class="radio-options">
@@ -23,13 +23,21 @@
           </label>
         </div>
       </div>
-      <h2 class="form-subtitle">2. Ingresa tus datos de contacto</h2>
+      <h2 class="form-subtitle">2. Ingresa tus datos básicos</h2>
       <div class="basic-info-container">
-        <%= f.input :name, label: "Nombre Completo" %>
-        <%= f.input :email, label: "Correo Eléctrónico" %>
+        <%= f.input :name,required:true, label: "Nombre Completo" %>
+        <%= f.input :email,required:true, label: "Correo Eléctrónico" %>
+        <%= f.input :id_type,required:true, label: "Tipo de Documento", collection: Subscription.id_types.keys, selected: "CC - Cédula de ciudadanía" %>
+        <%= f.input :tax_id,required:true, label: "Número de documento" %>
+        <%= f.input :address,required:true, label: "Dirección de entrega" %>
+      </div>
+      <h2 class="form-subtitle">3. Datos de la cuenta con la que vas a pagar</h2>
+      <div class="basic-info-container">
+        <%= f.input :account_type,required:true, label: "Tipo de Cuenta",  collection: Subscription.account_types.keys %>
+        <%= f.input :account_number,required:true, label: "Número de la cuenta" %>
       </div>
       <div class="text-right pt-5">
-        <%= f.submit "Reservar", class: "button2 banner-call-to-actions" %>
+        <%= f.submit "PAGAR", class: "button2 banner-call-to-actions" %>
       </div>
     <% end %>
   </div>
