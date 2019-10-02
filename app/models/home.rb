@@ -12,7 +12,7 @@ class Home < ApplicationRecord
 
   def self.coordenadas_ruta_individual(ruta)
     ruta = ruta.map do |marker|
-      self.coordenadas_marcador(marker)
+      coordenadas_marcador(marker)
     end
   end
 
