@@ -6,14 +6,14 @@ const initMapbox = () => {
   const convertRoutesToArray = (route) => {
     const routeArray = []
     route.forEach((pair) => {
-      const lat = parseFloat(Object.values(pair)[1], 10);
       const long = parseFloat(Object.values(pair)[0], 10);
+      const lat = parseFloat(Object.values(pair)[1], 10);
       routeArray.push([lat, long])
     })
     return routeArray;
   }
 
-  if (mapElement) { // only build a map if there's a div#map to inject into
+  if (mapElement) {
     const existentes = JSON.parse(mapElement.dataset.existentes);
     const proyectados = JSON.parse(mapElement.dataset.proyectados);
 
@@ -43,7 +43,6 @@ const initMapbox = () => {
             }
           },
           "layout": {
-            'visibility': 'visible',
             "line-join": "round",
             "line-cap": "round"
           },
@@ -71,7 +70,6 @@ const initMapbox = () => {
             }
           },
           "layout": {
-            'visibility': 'visible',
             "line-join": "round",
             "line-cap": "round"
           },

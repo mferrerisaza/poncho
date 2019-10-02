@@ -2,16 +2,12 @@ class Home < ApplicationRecord
   self.abstract_class = true
 
   def self.bike_routes_array(criterio)
-    require 'open-uri'
     url = 'https://www.medellin.gov.co/mapas/rest/services/ServiciosPlaneacion/POT48_Sistema_colectivo/MapServer/14/query?where=1%3D1&outFields=*&outSR=4326&f=json'
-
     data_serialize = open(url).read
     data = JSON.parse(data_serialize)
+
     rutas_existentes = data["features"].select { |ruta| ruta["attributes"]["ESTADO"] == criterio}
-    # rutas_existentes = data["features"]
-    array = rutas_existentes.map do |ruta|
-      coordenadas_ruta_individual(ruta["geometry"]["paths"][0])
-    end
+    array = rutas_existentes.map { |ruta| coordenadas_ruta_individual(ruta["geometry"]["paths"][0]) }
   end
 
   def self.coordenadas_ruta_individual(ruta)
