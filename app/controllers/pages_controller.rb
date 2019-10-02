@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   def home
     @is_full_path = false
-    @existentes = Home.bike_routes_array("Existente")
-    @proyectados = Home.bike_routes_array("Proyectado")
+    # @existentes = Home.bike_routes_array("Existente")
+    # @proyectados = Home.bike_routes_array("Proyectado")
   end
 
   def plans

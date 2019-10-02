@@ -10,33 +10,31 @@ export default class extends Controller {
 
   initMapbox() {
     const mapElement = this.element;
-    const convertRoutesToArray = (route) => {
-      const routeArray = []
-      route.forEach((pair) => {
-        const long = parseFloat(Object.values(pair)[0], 10);
-        const lat = parseFloat(Object.values(pair)[1], 10);
-        routeArray.push([lat, long])
-      })
-      return routeArray;
-    }
+    mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
+    const map = new mapboxgl.Map({
+      container: this.element,
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-75.56347005, 6.272682731],
+      zoom: 13
+    });
 
-    if (mapElement) {
-      const existentes = JSON.parse(mapElement.dataset.existentes);
-      const proyectados = JSON.parse(mapElement.dataset.proyectados);
+    map.on('load',() => {
+      this.fetchData("Existente", map, "#8bcfa3", 6, "capa");
+      this.fetchData("Proyectado", map, "#999999", 4, "capaP");
+    });
+  }
 
-      mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
-      const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-75.56347005, 6.272682731],
-        zoom: 13
-      });
-      map.on('load', function () {
+  fetchData(criterio, map, color, line, id) {
+    fetch(`https://www.medellin.gov.co/mapas/rest/services/ServiciosPlaneacion/POT48_Sistema_colectivo/MapServer/14/query?where=1%3D1&outFields=*&outSR=4326&f=json`)
+      .then(response => response.json())
+      .then((data) => {
+        let newData = data.features.filter(coordinate => coordinate.attributes.ESTADO === criterio);
+        let coordinates = newData.map(coordinate => coordinate.geometry.paths[0]);
         let i = 0;
-        proyectados.forEach((route) => {
-          const array = convertRoutesToArray(route);
+        coordinates.forEach((route) => {
+          const array = (route);
           map.addLayer({
-            "id": `capaP${i}`,
+            "id": `${id}${i}`,
             "type": "line",
             "source": {
               "type": "geojson",
@@ -54,40 +52,12 @@ export default class extends Controller {
               "line-cap": "round"
             },
             "paint": {
-              "line-color": "#999999",
-              "line-width": 4
-            }
-          });
-          i++
-        });
-        existentes.forEach((route) => {
-          const array = convertRoutesToArray(route);
-          map.addLayer({
-            "id": `capa${i}`,
-            "type": "line",
-            "source": {
-              "type": "geojson",
-              "data": {
-                "type": "Feature",
-                "properties": {},
-                "geometry": {
-                  "type": "LineString",
-                  "coordinates": array
-                }
-              }
-            },
-            "layout": {
-              "line-join": "round",
-              "line-cap": "round"
-            },
-            "paint": {
-              "line-color": "#8bcfa3",
-              "line-width": 6
+              "line-color": color,
+              "line-width": line
             }
           });
           i++
         });
       });
-    }
-  };
+  }
 }
