@@ -21,7 +21,7 @@ export default class extends Controller {
     }
 
     if (mapElement) {
-      const existentes = JSON.parse(mapElement.dataset.existentes);
+      const existentes = this.fetchData("En Estudio");
       const proyectados = JSON.parse(mapElement.dataset.proyectados);
 
       mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
@@ -89,5 +89,15 @@ export default class extends Controller {
         });
       });
     }
-  };
+  }
+
+  fetchData(criterio) {
+    fetch(`https://www.medellin.gov.co/mapas/rest/services/ServiciosPlaneacion/POT48_Sistema_colectivo/MapServer/14/query?where=1%3D1&outFields=*&outSR=4326&f=json`)
+      .then(response => response.json())
+      .then((data) => {
+        let newData = data.features.filter(coordinate => coordinate.attributes.ESTADO === criterio);
+        let coordinates = newData.map(coordinate => coordinate.geometry.paths[0]);
+        console.log(coordinates);
+      });
+  }
 }
