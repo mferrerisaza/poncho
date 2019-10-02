@@ -7,7 +7,10 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', "data-turbolinks-track": "reload"  %>
-    <%#= stylesheet_pack_tag 'application', media: 'all', "data-turbolinks-track": "reload"  %>
+    <%= stylesheet_pack_tag 'map', "data-turbolinks-track": "reload", defer: true %>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js' data-turbolinks-track="reload" defer></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' data-turbolinks-track="reload" defer/>
+    <%= stylesheet_pack_tag 'application', media: 'all', "data-turbolinks-track": "reload"  %>
     <%= javascript_include_tag 'application', defer: true, "data-turbolinks-track": "reload"  %>
     <%= javascript_pack_tag 'application', defer: true, "data-turbolinks-track": "reload" %>
     <%= favicon_link_tag asset_path('favicon.ico') %>

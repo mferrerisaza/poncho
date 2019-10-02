@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary'
+gem 'json', '~> 1.8', '>= 1.8.3'
+gem "geo_coord", require: "geo/coord"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
