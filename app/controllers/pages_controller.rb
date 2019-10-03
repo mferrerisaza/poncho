@@ -13,13 +13,15 @@ class PagesController < ApplicationController
   def create_subscription
     @subscription = Subscription.new(subscription_params)
     if @subscription.save
-      service = Bancolombia.new(
-        client_id: ENV['BANCOLOMBIA_CLIENT_ID'],
-        client_secret: ENV['BANCOLOMBIA_CLIENT_SECRET']
-      )
-      amount = subscription_params[:plan] == "bike" ? 150_000 : 120_000
-      @subscription.update(payment: service.call(amount))
-      redirect_to subscription_path @subscription
+      # service = Bancolombia.new(
+      #   client_id: ENV['BANCOLOMBIA_CLIENT_ID'],
+      #   client_secret: ENV['BANCOLOMBIA_CLIENT_SECRET']
+      # )
+      # amount = subscription_params[:plan] == "bike" ? 150_000 : 120_000
+      # @subscription.update(payment: service.call(amount))
+      # redirect_to subscription_path @subscription
+      redirect_to root_path
+      flash[:notice] = "Gracias por registrarte, pronto nos comunicaremos contigo"
     else
     end
   end
