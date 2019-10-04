@@ -15,8 +15,8 @@
   </head>
   <body>
     <%= render 'shared/flashes' %>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar'  unless controller_name = "sessions" %>
     <%= yield %>
-    <%= render 'shared/footer', background: "background-white", border_top:"border-top" %>
+    <%= render 'shared/footer', background: "background-white", border_top:"border-top" unless controller_name = "sessions" %>
   </body>
 </html>

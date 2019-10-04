@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: 'pages#home'
   get :plans, to: "pages#plans"
   get :plans, to: "pages#plans"

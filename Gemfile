@@ -17,6 +17,8 @@ gem 'webpacker'
 gem 'cloudinary'
 gem 'json', '~> 1.8', '>= 1.8.3'
 gem "geo_coord", require: "geo/coord"
+gem 'rails_admin', '~> 2.0'
+gem 'devise'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
