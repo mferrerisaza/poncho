@@ -16,7 +16,6 @@
   <body>
     <%= render 'shared/flashes' %>
     <%= render 'shared/navbar' unless devise_controller? %>
-    <%= console %>
     <%= yield %>
     <%= render 'shared/footer', background: "background-white", border_top:"border-top" unless devise_controller? %>
   </body>
