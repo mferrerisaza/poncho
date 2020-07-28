@@ -15,7 +15,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary'
-gem 'json', '~> 1.8', '>= 1.8.3'
+gem 'json', '~> 2.3'
 gem "geo_coord", require: "geo/coord"
 gem 'rails_admin', '~> 2.0'
 gem 'devise'

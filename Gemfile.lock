@@ -111,7 +111,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
-    json (1.8.6)
+    json (2.3.0)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.1.1)
@@ -281,7 +281,7 @@ DEPENDENCIES
   font-awesome-sass (~> 5.6.1)
   geo_coord
   jbuilder (~> 2.0)
-  json (~> 1.8, >= 1.8.3)
+  json (~> 2.3)
   listen (~> 3.0.5)
   pg (~> 0.21)
   pry-byebug
